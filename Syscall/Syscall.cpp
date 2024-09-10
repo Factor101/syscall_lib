@@ -226,8 +226,8 @@ __forceinline _NODISCARD boolean Syscall::isHooked(PVOID pFunctionBase)
 		PVOID pNextExport = (PBYTE)pFunctionBase + 0x20;
 
 
-		return 0;
-	}
+	return 0;
+}
 
 	return FALSE;
 }
