@@ -207,6 +207,9 @@ _NODISCARD DWORD Syscall::searchSSN(PVOID pFunctionBase)
 
 	if(*(PBYTE)pFunctionBase == JMP_INSTRUCTION) {
 		// function is hooked
+	} else {
+		// ssn must be pFunctionBase + 0x04
+		return *(PBYTE)((PBYTE)pFunctionBase + 0x04);
 	}
 }
 

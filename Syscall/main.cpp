@@ -22,6 +22,8 @@ int main(int argc, char* argv[])
 	//PRTL_USER_PROCESS_PARAMETERS ProcessParameters = NULL;
 	////RtlCreateProcessParametersEx(&ProcessParameters, &NtImagePath, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, RTL_USER_PROCESS_PARAMETERS_NORMALIZED);
 
+	// get notepad pid w winapi
+	DWORD notepadPid = 0;
 	Syscall __NtOpenProcess("NtOpenProcess");
 
 	HANDLE processHandle = NULL;
